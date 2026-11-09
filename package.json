@@ -1,0 +1,33 @@
+{
+  "name": "canary",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "bun run lint && bun run typecheck && bun test && bun run format --check",
+    "test": "bun test",
+    "format": "oxfmt",
+    "lint": "oxlint --type-aware",
+    "typecheck": "tsrs --noEmit",
+    "plan": "alchemy plan --stage prod",
+    "deploy": "alchemy deploy --stage prod"
+  },
+  "dependencies": {
+    "@alchemy.run/cloudflare": "2.0.0-beta.85",
+    "@distilled.cloud/cloudflare": "1.0.0-rc.18",
+    "@effect/platform-bun": "4.1.2",
+    "@effect/platform-node": "4.1.2",
+    "@effect/platform-node-shared": "4.1.2",
+    "alchemy": "2.0.0-beta.85",
+    "effect": "4.1.2",
+    "tsrs": "0.23.0-ts7.1.0-beta"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "5.20261109.1",
+    "@types/bun": "1.4.4",
+    "@types/node": "26.6.6",
+    "oxfmt": "0.77.0",
+    "oxlint": "1.92.0",
+    "oxlint-tsgolint": "7.0.2006",
+    "typescript": "7.0.2"
+  }
+}

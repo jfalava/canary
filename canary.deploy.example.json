@@ -1,0 +1,9 @@
+{
+  "worker": {
+    "name": "example-alerts",
+    "domain": {
+      "name": "alerts.example.com",
+      "zoneName": "example.com"
+    }
+  }
+}

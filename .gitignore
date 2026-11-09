@@ -1,0 +1,9 @@
+node_modules/
+.alchemy/
+.env
+.env.*
+!.env.example
+.dev.vars*
+coverage/
+*.env
+/canary.deploy.json
